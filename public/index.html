@@ -14,8 +14,8 @@
             <div class="row vh-100">
                 <div class="col d-flex justify-content-center my-5 flex-column">
                     <div class="text-login">
-                        <p>Organize suas finânças de uma forma fácil.</p>
-                        <p>Controle se dinheiro e investimenos.</p>
+                        <p>Ajuste suas finânças de uma forma fácil.</p>
+                        <p>Controle seu dinheiro e investimenos.</p>
                     </div>
                     <div class="text-center">
                         <img src="./assets/images/pocket.png" alt="image pocket" class="img-fluid" srcset="">
@@ -96,12 +96,17 @@
                 </div>
                 <div class="mb-3">
                   <label for="password-create-input" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="password-create-input" required onchange='confereSenha();'>
+                  <input type="password" class="form-control" placeholder="Senha" id="password-create-input" required>
                   <div id="emailHelp" class="form-text">Utilize uma senha fácil de lembrar e anote para não esquecer.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="password-confirme-input" class="form-label">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="password-confirme-input" required onchange='confereSenha();'>
+                    <label for="password-confirme-input" class="pure-form"> 
+                        <fieldset>
+                            <legend>Confirme sua senha</legend>
+                        
+                        </fieldset>
+                    </label>
+                    <input type="password" class="form-control" placeholder="Confirme Senha" id="password-confirme-input" required>
                   </div>
                 
             </div>

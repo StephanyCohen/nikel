@@ -34,12 +34,14 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     getCashOut();
     getTotal();
     
+    alert("Lançamento adicionado com sucesso.")
+
     const account = getAccount(total);
 
     if(total < 0) {
         alert("Atenção. Seu saldo após o cadastrar essa despesa será negativo, deseja continuar?");
     }else{
-        alert ("Lançamento adicionado com sucesso.");
+        alert ("");
     }
     
 

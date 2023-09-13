@@ -4,6 +4,7 @@ const session = localStorage.getItem("session");
 
 checkLogged();
 
+
 //LOGAR NO SISTEMA
 document.getElementById("login-form").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -41,7 +42,7 @@ document.getElementById("create-form").addEventListener("submit", function(e){
 
     const email = document.getElementById ("email-create-input").value;
     const password = document.getElementById ("password-create-input").value;
-    const confirmePassword = document.getElementById ("password-confirme-input").value
+    const confirmePassword = document.getElementById ("password-confirme-input").value;
 
     if(email.length < 5){
         alert("Preencha o campo com um e-mail válido");
@@ -53,19 +54,20 @@ document.getElementById("create-form").addEventListener("submit", function(e){
         return
     }
 
-    if(confirmePassword.length < 4){
-        function confereSenha() {
-            const senha = document.querySelector('input[document.getElementById ("password-create-input")]');
-            const confirma = document.querySelector('input[document.getElementById ("password-confirme-input")]');
-        
-            if(confirma.value === senha.value) {
-                confirma.setCustomValidity('');
-            }else {
-                confirma.setCustomValidity('Senhas não conferem');
-            }
-        }
-    }
+       
+    confirm_password = document.getElementById("password-confirme-input");
 
+    function validatePassword(){
+        if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Senhas diferentes!");
+        } else {
+        confirm_password.setCustomValidity('');
+     }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    
     saveAccount({
         login: email,
         password: password,
